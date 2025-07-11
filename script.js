@@ -1,82 +1,130 @@
-foods = ['Chick-Fil-a','McDonalds','Chex Wing and Grill','Sabor Latin Grill','Papa Johns','Cook-Out','Kaizoku','WingStop']
+document.addEventListener('DOMContentLoaded', function() {
 
 
 
-food [
+let fastfood = [
     {
-    chain : 'Papa Johns',
+    name : 'Papa Johns',
     type : 'Pizza',
     minPrice : 10.00,
     maxPrice : 15.00
 },
 {
-    chain : 'Chick-Fil-A',
+    name : 'Chick-Fil-A',
     type : 'Sandwich/Sub',
     minPrice : 10.00,
     maxPrice : 11.00
 },
 {
-    chain : 'McDonalds',
+    name : 'McDonalds',
     type : 'Snack',
     minPrice : 7.00,
     maxPrice : 11.00
 },
 {
-    chain : 'Hungry Howies',
+    name : 'Hungry Howies',
     type : 'Pizza',
     minPrice : 10.00,
     maxPrice : 13.00
 },
 {
-    chain : `Jet's Pizza`,
+    name : `Jet's Pizza`,
     type : 'Pizza',
     minPrice : 12.00,
     maxPrice : 15.00
 },
 {
-    chain : 'New York Pizza and Pasta',
+    name : 'New York Pizza and Pasta',
     type : 'Pizza',
     minPrice : 10.00,
     maxPrice : 20.00
 },
 {
-    chain : 'Chex Wing and Grill',
+    name : 'Chex Wing and Grill',
     type : 'Sandwich/Sub',
     minPrice : 10.00,
     maxPrice : 14.00
 },
 {
-    chain : 'Sabor',
+    name : 'Sabor',
     type : 'Burgers/Beef',
     minPrice : 8.00,
     maxPrice : 11.00
 },
 {
-    chain : 'CookOut',
+    name : 'CookOut',
     type : 'Burgers/Beef',
     minPrice : 6.00,
     maxPrice : 10.00
 },
 {
-    chain : 'Kaizoku',
+    name : 'Kaizoku',
     type : 'Non-American Cusine',
     minPrice : 12.00,
     maxPrice : 17.00
 },
 {
-    chain : 'ShakeShack',
+    name : 'ShakeShack',
     type : 'Burgers/Beef',
     minPrice : 7.00,
     maxPrice : 14.00
+},
+{
+    name : 'Chilis',
+    type : 'Burgers/Beef',
+    minPrice : 12.00,
+    maxPrice : 15.00
+}
+]
+let fastfoodindicators = {
+    cheap : false,
+    pizza : false,
+    sandwich : false,
+    burgers : false,
+    snack : false,
+    naf : false
 }
 
-
-
-
-
-
+let homefood = [
+    {
+        name : 'Gyoza',
+        type : 'Japanese',
+        site : 'https://www.recipetineats.com/gyoza-japanese-dumplings-potstickers/',
+        video : 'https://www.youtube.com/watch?v=5-yt7tFpHPY',
+        photo : 'https://japanesetaste.com/cdn/shop/articles/how-to-make-gyoza-japanese-dumplings-at-home-japanese-taste.jpg?v=1694487043&width=5760'
+    }
 ]
 
-document.addEventListener('click', function(){
-    
+
+const boxes = document.querySelectorAll('input[type="checkbox');
+
+
+const fastfoodtypes = ['cheap','pizza','sandwich','burgers','snack','naf']
+const homefoodtypes = ['']
+
+
+const foodbutton = document.getElementById('foodbutton');
+
+
+
+
+
+foodbutton.addEventListener('click', function(){
+        boxes.forEach(box=>{
+        let type = box.value; 
+        if (box.checked) {
+            fastfoodindicators[type] = true;
+        }
+        else{
+            fastfoodindicators[type] = false;
+        }
+    })
+
+    foodPicked = fastfood[Math.floor(Math.random() * fastfood.length)]
+    document.getElementById('name').textContent = foodPicked.name
+    delete fastfood[foodPicked];
+    console.log(fastfood) 
+
 })
+
+});
