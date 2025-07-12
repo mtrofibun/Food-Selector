@@ -1,129 +1,118 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-
-
 let fastfood = [
     {
     name : 'Papa Johns',
-    type : 'Pizza',
+    type : 'pizza',
     minPrice : 10.00,
     maxPrice : 15.00
 },
 {
     name : 'Chick-Fil-A',
-    type : 'Sandwich/Sub',
+    type : 'sandwich',
     minPrice : 10.00,
     maxPrice : 11.00
 },
 {
     name : 'McDonalds',
-    type : 'Snack',
+    type : 'snack',
     minPrice : 7.00,
     maxPrice : 11.00
 },
 {
     name : 'Hungry Howies',
-    type : 'Pizza',
+    type : 'pizza',
     minPrice : 10.00,
     maxPrice : 13.00
 },
 {
     name : `Jet's Pizza`,
-    type : 'Pizza',
+    type : 'pizza',
     minPrice : 12.00,
     maxPrice : 15.00
 },
 {
     name : 'New York Pizza and Pasta',
-    type : 'Pizza',
+    type : 'pizza',
     minPrice : 10.00,
     maxPrice : 20.00
 },
 {
     name : 'Chex Wing and Grill',
-    type : 'Sandwich/Sub',
+    type : 'sandwich',
     minPrice : 10.00,
     maxPrice : 14.00
 },
 {
-    name : 'Sabor',
-    type : 'Burgers/Beef',
+    name : 'Sabor Latin Grill',
+    type : 'burgers',
     minPrice : 8.00,
     maxPrice : 11.00
 },
 {
     name : 'CookOut',
-    type : 'Burgers/Beef',
+    type : 'burgers',
     minPrice : 6.00,
     maxPrice : 10.00
 },
 {
     name : 'Kaizoku',
-    type : 'Non-American Cusine',
+    type : 'nac',
     minPrice : 12.00,
     maxPrice : 17.00
 },
 {
     name : 'ShakeShack',
-    type : 'Burgers/Beef',
+    type : 'burgers',
     minPrice : 7.00,
     maxPrice : 14.00
 },
 {
     name : 'Chilis',
-    type : 'Burgers/Beef',
+    type : 'burgers',
     minPrice : 12.00,
     maxPrice : 15.00
 }
 ]
-let fastfoodindicators = {
-    cheap : false,
-    pizza : false,
-    sandwich : false,
-    burgers : false,
-    snack : false,
-    naf : false
-}
-
-let homefood = [
-    {
-        name : 'Gyoza',
-        type : 'Japanese',
-        site : 'https://www.recipetineats.com/gyoza-japanese-dumplings-potstickers/',
-        video : 'https://www.youtube.com/watch?v=5-yt7tFpHPY',
-        photo : 'https://japanesetaste.com/cdn/shop/articles/how-to-make-gyoza-japanese-dumplings-at-home-japanese-taste.jpg?v=1694487043&width=5760'
-    }
-]
-
 
 const boxes = document.querySelectorAll('input[type="checkbox');
-
-
-const fastfoodtypes = ['cheap','pizza','sandwich','burgers','snack','naf']
-const homefoodtypes = ['']
-
-
+const fastfoodtypes = ['pizza','sandwich','burgers','snack','naf']
 const foodbutton = document.getElementById('foodbutton');
 
-
-
-
-
+/* fast food option */
 foodbutton.addEventListener('click', function(){
+    falsecount = 0;
+    filters = []
         boxes.forEach(box=>{
-        let type = box.value; 
         if (box.checked) {
-            fastfoodindicators[type] = true;
+            filters.push(box.value);
         }
         else{
-            fastfoodindicators[type] = false;
+            falsecount += 1;
+            
         }
     })
+    const newFastFood = fastfood.filter(item => filters.includes(item.type));
 
-    foodPicked = fastfood[Math.floor(Math.random() * fastfood.length)]
+
+    if(falsecount === fastfoodtypes.length){
+        foodPicked = fastfood[Math.floor(Math.random() * fastfood.length)]
+        
+    }
+    else{
+        foodPicked = newFastFood[Math.floor(Math.random() * newFastFood.length)]
+            console.log(newFastFood);
+    }
+
+    if(newFastFood.length == 0 && falsecount != fastfoodtypes.length || fastfood.length == 0){
+        document.getElementById('error').textContent = 'Ran out of ideas'
+    }else{
+        document.getElementById('error').textContent = ''
+    }
     document.getElementById('name').textContent = foodPicked.name
-    delete fastfood[foodPicked];
-    console.log(fastfood) 
+    document.getElementById('cost').textContent = `${foodPicked.minPrice} to ${foodPicked.maxPrice} USD`
+    fastfood = fastfood.filter(item => item !== foodPicked)
+    
 
 })
 
