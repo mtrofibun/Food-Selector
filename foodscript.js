@@ -79,7 +79,7 @@ const boxes = document.querySelectorAll('input[type="checkbox');
 const fastfoodtypes = ['pizza','sandwich','burgers','snack','naf']
 const foodbutton = document.getElementById('foodbutton');
 
-/* fast food option */
+
 foodbutton.addEventListener('click', function(){
     falsecount = 0;
     filters = []

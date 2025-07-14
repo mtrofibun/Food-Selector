@@ -11,38 +11,45 @@
    <fieldset>
         <div class = "meatops">
             <p>Meat Options</p>
-             <input type="checkbox" id="nonmeat" name="nonmeat"/>
+             <input type="checkbox" id="nonmeat" name="nonmeat" value = "nonmeat"/>
              <label for="scales">Non-meat</label>
-             <input type="checkbox" id="chicken" name="chicken"/>
+             <input type="checkbox" id="chicken" name="chicken" value = "chicken"/>
              <label for="scales">Chicken</label>
-             <input type="checkbox" id="beef" name="beef"/>
+             <input type="checkbox" id="beef" name="beef" value = "beef"/>
              <label for="scales">Beef</label>
-             <input type="checkbox" id="pork" name="pork"/>
+             <input type="checkbox" id="pork" name="pork" value = "pork"/>
              <label for="scales">Pork</label>
+             <input type="checkbox" id="fish" name="fish" value = "fish"/>
+             <label for="scales">Fish</label>
              
         </div>
     </fieldset>
     <fieldset>
         <div class = "culture">
             <p>Cuisine</p>
-             <input type="checkbox" id="japanese" name="japanese"/>
+             <input type="checkbox" id="japanese" name="japanese" value = "japanese"/>
              <label for="scales">Japanese</label>
-             <input type="checkbox" id="chinese" name="chinese"/>
+             <input type="checkbox" id="chinese" name="chinese" value = "chinese"/>
              <label for="scales">Chinese</label>
-             <input type="checkbox" id="italy" name="italy"/>
-             <label for="scales">Italitan</label>
-             <input type="checkbox" id="amercian" name="amercian"/>
+             <input type="checkbox" id="italy" name="italy" value = "italy"/>
+             <label for="scales">Italian</label>
+             <input type="checkbox" id="amercian" name="amercian"  value = "amercian"/>
              <label for="scales">Amercian</label>
-             <input type="checkbox" id="mexican" name="mexican"/>
+             <br>
+             <input type="checkbox" id="mexican" name="mexican"  value = "mexican"/>
              <label for="scales">Mexican</label>
              
         </div>
     </fieldset>
-    <h1 id = "placement"></h1>
-    <iframe width="420" height="315"
-        id = "video" src="" style="display: none;"> 
-    </iframe> 
+    <h1 id = "foodName"></h1>
+    <img src = "" style = "min-width:300px; max-height:300px;"id = "image">
+    <p style = "display:none;" id = "show">Cook it using a set of instructions off of a <a href = " " id = "site">website</a></p>
+    <p style = "display:none;" id = "show1">Or a <a href = " " id = "video">video!</a></p>
+    <br>
     <button id = 'homefoodbutton'>Push for Lunch/Dinner Idea!</button>
+    <p id = 'error'></p>
+    <p>Want another selection to be added? submit my google form!</p>
+    
     <script src = 'homescript.js'></script>
 </body>
 </html>
