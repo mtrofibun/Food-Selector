@@ -146,26 +146,22 @@ const meatBoxes = document.querySelectorAll('.meatops input[type="checkbox"');
 const meattypes = ['nonmeat','chicken','beef','pork','fish']
 const culturetypes = ['japanese','chinese','italitan','amercian','mexico']
 
-function filtering(boxes,typeLength){
-    falsecount = 0;
+function filtering(boxes){
+    count = 0;
     filters = []
-    unchecked = false
+    isChecked = false
     boxes.forEach(box=>{
         if (box.checked) {
             filters.push(box.value);
-            
+            count += 1;
         }
-        else{
-            falsecount += 1;
-            
-        }
+        
+       
     })
-
-    if (falsecount == typeLength){
-        unchecked = true;
-    }
-    console.log('false debug', falsecount)
-    return [unchecked, filters];
+     if(count > 0){
+            isChecked = true;
+        }
+    return [isChecked, filters];
 }
 
 
@@ -179,7 +175,7 @@ homefoodbutton.addEventListener('click',function(){
     
     const newHomeFood = homefood.filter(item => filtersFinal.includes(item.type) || filtersFinal.includes(item.country));
 
-    if(meatCount == true && cusisneCount == true){
+    if(!meatCount && !cusisneCount){
         foodPicked = homefood[Math.floor(Math.random() * homefood.length)]
     }
     else{

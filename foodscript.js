@@ -57,7 +57,7 @@ let fastfood = [
 },
 {
     name : 'Kaizoku',
-    type : 'nac',
+    type : 'naf',
     minPrice : 12.00,
     maxPrice : 17.00
 },
@@ -72,7 +72,47 @@ let fastfood = [
     type : 'burgers',
     minPrice : 12.00,
     maxPrice : 15.00
-}
+},
+{
+    name : 'Sonic',
+    type : 'snack',
+    minPrice : 4.00,
+    maxPrice : 8.00
+},
+{
+    name : 'Bojangles',
+    type : 'sandwich',
+    minPrice : 10.00,
+    maxPrice : 13.00
+},
+{
+    name : 'Panera ',
+    type : 'sandwich',
+    minPrice : 12.00,
+    maxPrice : 17.00
+},
+{
+    name : 'TacoBell',
+    type : 'snack',
+    minPrice : 4.00,
+    maxPrice : 8.00
+},
+
+{
+    name : 'Little Ceasers',
+    type : 'snack',
+    minPrice : 4.00,
+    maxPrice : 6.00
+},
+
+{
+    name : 'Five Guys',
+    type : 'burgers',
+    minPrice : 13.00,
+    maxPrice : 20.00
+},
+
+
 ]
 
 const boxes = document.querySelectorAll('input[type="checkbox');
@@ -81,21 +121,25 @@ const foodbutton = document.getElementById('foodbutton');
 
 
 foodbutton.addEventListener('click', function(){
-    falsecount = 0;
+    count = 0;
+    isChecked = false;
     filters = []
         boxes.forEach(box=>{
         if (box.checked) {
             filters.push(box.value);
+            count += 1
         }
-        else{
-            falsecount += 1;
-            
-        }
+        
     })
+
+    if(count > 0){
+            isChecked = true;
+        }
+
     const newFastFood = fastfood.filter(item => filters.includes(item.type));
 
 
-    if(falsecount === fastfoodtypes.length){
+    if(!isChecked){
         foodPicked = fastfood[Math.floor(Math.random() * fastfood.length)]
         
     }
@@ -104,7 +148,7 @@ foodbutton.addEventListener('click', function(){
             console.log(newFastFood);
     }
 
-    if(newFastFood.length == 0 && falsecount != fastfoodtypes.length || fastfood.length == 0){
+    if(newFastFood.length == 0 && isChecked || fastfood.length == 0){
         document.getElementById('error').textContent = 'Ran out of ideas'
     }else{
         document.getElementById('error').textContent = ''
