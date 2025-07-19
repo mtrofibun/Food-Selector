@@ -120,7 +120,63 @@ let homefood = [
         site : 'https://cookieandkate.com/lemony-roasted-cauliflower-risotto/',
         video : 'https://www.youtube.com/watch?v=d8AlmZ6GGH0',
         photo : 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/2/4/3/RX-FNM_030111-Weeknight-Dinners-012_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539850185.webp'
-    }
+    },
+    {
+        name : 'Yakitori',
+        type : 'chicken',
+        country : 'japanese',
+        site : 'https://www.justonecookbook.com/yakitori/',
+        video : 'https://www.youtube.com/watch?v=98a0A6nMQiQ&pp=ygUJI2thcml5YWtp',
+        photo : 'https://int.japanesetaste.com/cdn/shop/articles/how-to-make-yakitori-grilled-chicken-skewers-japanese-taste.jpg?v=1717125599&width=5760'
+    },
+    {
+        name : 'Tonkatsu ',
+        type : 'pork',
+        country : 'japanese',
+        site : 'https://www.justonecookbook.com/tonkatsu/',
+        video : 'https://www.youtube.com/watch?v=AtgqMOi2Ze4',
+        photo : 'https://upload.wikimedia.org/wikipedia/commons/9/93/%22Amai-Yuwaku%22_Special_Loin_Pork_Cutlet1.jpg'
+    },
+    {
+        name : 'Miso Soup',
+        type : 'nonmeat',
+        country : 'japanese',
+        site : 'https://www.justonecookbook.com/homemade-miso-soup/',
+        video : 'https://www.youtube.com/watch?v=wshf6yZbhwk',
+        photo : 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4TgpyYb4qz7LAJybB917Qu2KfCk5NC4DF8Ybu0JFX1HNFpY41u6gNvdcYO0T_eT5yD7NEMxFbPty78Cf0PgJrVCtzgLoI6JYAsaOilm4e'
+    },
+    {
+        name : 'Chalupa',
+        type : 'beef',
+        country : 'mexican',
+        site : 'https://www.cookingcarnival.com/homemade-chalupa/',
+        video : 'https://www.tiktok.com/@nanajoe19/video/7402363186780933419?lang=en',
+        photo : 'https://www.simplecomfortfood.com/wp-content/uploads/2014/01/chalupa-high.jpg'
+    },
+    {
+        name : '',
+        type : '',
+        country : '',
+        site : '',
+        video : '',
+        photo : ''
+    },
+    {
+        name : '',
+        type : '',
+        country : '',
+        site : '',
+        video : '',
+        photo : ''
+    },
+    {
+        name : '',
+        type : '',
+        country : '',
+        site : '',
+        video : '',
+        photo : ''
+    },
 ]
 
 const homefoodbutton = document.getElementById('homefoodbutton');

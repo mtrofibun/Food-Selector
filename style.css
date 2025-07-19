@@ -1,23 +1,52 @@
 body{
-    
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color:#fbf9ff;
-    color:#0077B6;
+    color:#423E28;
 }
+
+
 button{
     border-radius: 5px;
     margin:20px;
     padding:20px;
+    color:#637b71;
+    background-color:#e1f3f0;
+    outline:none;
+}
+
+button:hover{
+    color:#e1f3f0;
+    background-color:#637b71;
+    transition: 0.5s;
+    cursor:pointer;
 }
 
 fieldset{
-    margin: 0 auto;
-   max-width:600px;
-   min-width:200px;
-   background-color:#cee0f1;
-   color:#0077B6;
-   border:solid 1px;
     
+    margin: 0 auto;
+   max-width:60%;
+   min-width:30%;
+   background-color:#d5f4e69a;
+   color:#50723C;
+   border:solid 1.5px;
+   border-radius:5px;
+    
+}
+
+
+.background-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+a{
+    color:#50723C;
 }
