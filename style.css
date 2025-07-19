@@ -3,8 +3,8 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color:rgba(232, 232, 222, 0.785);
-    color:rgb(95, 84, 60);
+    background-color:#fbf9ff;
+    color:#0077B6;
 }
 button{
     border-radius: 5px;
@@ -16,6 +16,8 @@ fieldset{
     margin: 0 auto;
    max-width:600px;
    min-width:200px;
-   color:rgb(95, 84, 60);
+   background-color:#cee0f1;
+   color:#0077B6;
+   border:solid 1px;
     
 }

@@ -120,31 +120,7 @@ let homefood = [
         site : 'https://cookieandkate.com/lemony-roasted-cauliflower-risotto/',
         video : 'https://www.youtube.com/watch?v=d8AlmZ6GGH0',
         photo : 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/2/4/3/RX-FNM_030111-Weeknight-Dinners-012_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539850185.webp'
-    },
-    {
-        name : '',
-        type : '',
-        country : '',
-        site : '',
-        video : '',
-        photo : ''
-    },
-    {
-        name : '',
-        type : '',
-        country : '',
-        site : '',
-        video : '',
-        photo : ''
-    },
-    {
-        name : '',
-        type : '',
-        country : '',
-        site : '',
-        video : '',
-        photo : ''
-    },
+    }
 ]
 
 const homefoodbutton = document.getElementById('homefoodbutton');
