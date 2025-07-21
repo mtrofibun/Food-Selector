@@ -4,55 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = 'stylesheet' href = "style.css">
-    <title>Document</title>
+    <title>Meal Selector</title>
     
 </head>
 <body>
     <img src="https://i.pinimg.com/736x/61/47/68/61476861116314584b20835982c52450.jpg" class="background-img" alt="Background">
    <fieldset>
+    <div class = 'fullset'>
         <div class = "meatops">
             <h2>Meat Options</h2>
+            <div class = 'options'>
              <input type="checkbox" id="nonmeat" name="nonmeat" value = "nonmeat"/>
-             <label for="scales">Non-meat</label>
+             <label for="nonmeat">Non-meat</label>
              <input type="checkbox" id="chicken" name="chicken" value = "chicken"/>
-             <label for="scales">Chicken</label>
+             <label for="chicken">Chicken</label>
              <input type="checkbox" id="beef" name="beef" value = "beef"/>
-             <label for="scales">Beef</label>
+             <label for="beef">Beef</label>
              <input type="checkbox" id="pork" name="pork" value = "pork"/>
-             <label for="scales">Pork</label>
+             <label for="pork">Pork</label>
              <input type="checkbox" id="fish" name="fish" value = "fish"/>
-             <label for="scales">Fish</label>
-             
+             <label for="fish">Fish</label>
+             </div>
         </div>
     </fieldset>
     <fieldset>
         <div class = "culture">
             <h2>Cuisine</h2>
+            <div class = 'options'>
              <input type="checkbox" id="japanese" name="japanese" value = "japanese"/>
-             <label for="scales">Japanese</label>
+             <label for="japanese">Japanese</label>
              <input type="checkbox" id="chinese" name="chinese" value = "chinese"/>
-             <label for="scales">Chinese</label>
+             <label for="chinese">Chinese</label>
              <input type="checkbox" id="italy" name="italy" value = "italy"/>
-             <label for="scales">Italian</label>
-             <input type="checkbox" id="amercian" name="american"  value = "american"/>
-             <label for="scales">Amercian</label>
+             <label for="italy">Italian</label>
+             <input type="checkbox" id="american" name="american"  value = "american"/>
+             <label for="american">Amercian</label>
+             </div>
              <br>
              <input type="checkbox" id="mexican" name="mexican"  value = "mexican"/>
-             <label for="scales">Mexican</label>
+             <label for="mexican">Mexican</label>
              
+        </div>
         </div>
     </fieldset>
     
     <h1 id = "foodName"></h1>
-    <img src = "" style = "min-width:100px; max-height:230px; max-width:300px; min-height:300px; border-radius:3px; border: 3px #a6a286 dashed;overflow: hidden; display:none;"id = "image">
-    <h3 style = "display:none;" id = "show">Cook it using a set of instructions off of a <a href = " " id = "site">website</a></h3>
-    <h3 style = "display:none;" id = "show1">Or a <a href = " " id = "video">video!</a></h3>
-    <h3 id = 'error' style = "color:rgb(185, 91, 91);"></h3>
+    <img src = "" style = "min-width:100px; max-height:230px; max-width:300px; min-height:300px; border-radius:3px; border: 3px #625f47 solid;overflow: hidden;  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); display:none;"id = "image">
+    <h4 style = "display:none;" id = "show">Cook it using a set of instructions off of a <a href = " " id = "site">website</a></h4>
+    <h4 style = "display:none;" id = "show1">Or a <a href = " " id = "video">video!</a></h4>
+    <h4 id = 'error' style = "color:rgb(185, 91, 91);"></h4>
     <button id = 'homefoodbutton'>Push for Lunch/Dinner Idea!</button>
     
     <p>Want another selection to be added? submit my <a href = 'https://docs.google.com/forms/d/e/1FAIpQLSe9GdvrLymnvIQChXNG1_Y7hWCddp6eXGI796PNoL1LRAh0uw/viewform?usp=dialog'>google form!</a></p>
 
     <script src = 'homescript.js'></script>
-
+    <br>
 </body>
 </html>
